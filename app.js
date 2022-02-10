@@ -1,13 +1,11 @@
-// console.log 가 아닌 return 을 해야하는 이유
+// document: 브라우저에 이미 존재하는 object
+// 내가 접근할 수 있는 HTML 을 가리키는 객체
+// HTML 코드를 Javascript 관점에서 보는 것
 
-const age = 100;
-function calculateKrAge(ageOfForeigner) {
-  return ageOfForeigner + 2;
-  // return: function 이 function 밖과 소통하는 방법
-}
+const title = document.getElementById("title");
 
-const krAge = calculateKrAge(age);
-// 무언가를 return 하면 계산을 담당하는 function 의 코드는
-// 그 function 이 return 하는 값과 같아지게 된다.
+console.dir(title);
+// <h1> 하나에서 무수히 많은 것들을 가져올 수 있다.
 
-console.log(krAge);
+title.innerText = "got you!!";
+// JS 에서 어떤 HTML element 이든지 가져올 수 있고, 변경할 수 있다.
