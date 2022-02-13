@@ -9,7 +9,7 @@ JavaScript
 - DOM Functions
 - Events
 - if / else / for
-
+----------------------
 - Clock
 - To Do List
 - Get Geolocation
