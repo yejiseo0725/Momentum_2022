@@ -1,15 +1,16 @@
+const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
-const logingButton = document.querySelector("#login-form button");
 
-function handleBtnSubmit() {
+function onLoginSubmit(event) {
+  event.preventDefault(); // 새로고침 방지 (브라우저 기본 동작 방지)
   const username = loginInput.value;
   console.log(username);
 }
 
-logingButton.addEventListener("click", handleBtnSubmit);
+// ~ onLoginSubmit(INFO) ~
+// 우리는 그저 argument 에 공간을 제공하기만 하면,
+// JS가 방금 일어난 event 에 대한 정보를 지닌 argument 를 채워넣는다.
 
-// username 유효성 검사
-// 언제나 user 를 믿지 않고 유효성을 검사하는 것은 아주 좋은 습관이지만,
-// 이미 가지고 있는 기능을 사용하는 것을 추천한다!
-// input: required, maxlength 등 이용하기
-// 여기서 input 은 반드시 form tag 안에 들어가 있어야 한다.
+loginForm.addEventListener("submit", onLoginSubmit);
+// submit 은 enter 를 누르거나, 버튼을 클릭할 때 발생
+// form submit 의 default 동작: 새로고침
