@@ -1,9 +1,9 @@
 const clockTitle = document.querySelector(".js-clock");
 
-function ChristmasEveTimer() {
-  const xmasDate = new Date("2022-12-24:00:00:00+0900");
+function newYearTimer() {
+  const newYearDate = new Date("2023-01-01:00:00:00+0900");
   const nowDate = new Date();
-  const gapDate = xmasDate - nowDate;
+  const gapDate = newYearDate - nowDate;
   const days = Math.floor(gapDate / (1000 * 60 * 60 * 24)); //일
   const hours = Math.floor((gapDate / (1000 * 60 * 60)) % 24); //시
   const minutes = Math.floor(((gapDate / 1000) * 60) % 60); //분
@@ -14,5 +14,5 @@ function ChristmasEveTimer() {
   }m ${seconds < 10 ? `0${seconds}` : seconds}s`;
 }
 
-ChristmasEveTimer();
-setInterval(ChristmasEveTimer, 1000);
+newYearTimer();
+setInterval(newYearTimer, 1000);
